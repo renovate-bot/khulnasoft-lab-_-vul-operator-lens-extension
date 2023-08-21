@@ -48,9 +48,9 @@ export class WorkloadClusterRbacAssessmentReports extends React.Component<Render
         const {object: workload} = this.props;
 
         const selector = [
-            "trivy-operator.resource.kind=" + workload.kind,
-            "trivy-operator.resource.name=" + workload.getName(),
-            "trivy-operator.resource.namespace=" + workload.getNs()
+            "vul-operator.resource.kind=" + workload.kind,
+            "vul-operator.resource.name=" + workload.getName(),
+            "vul-operator.resource.namespace=" + workload.getNs()
         ];
 
         const rbacAssessmentReport = store.getByLabel(selector)
